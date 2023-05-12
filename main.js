@@ -3,8 +3,6 @@ import './style.css';
 // prettier-ignore
 let nodeIdCounter = 0, linkIdCounter = 0;
 // prettier-ignore
-let nodes = [], links = [];
-// prettier-ignore
 let dragSourceNode = null, interimLink = null;
 
 //////////////////////////////////////
@@ -105,7 +103,7 @@ const setInterimLink = (source, target) => {
   updateGraphData();
 };
 
-const removeLink = (link) => links.splice(links.indexOf(link), 1);
+const removeLink = (link) => gData.links.splice(gData.links.indexOf(link), 1);
 
 const removeInterimLinkWithoutAddingIt = () => {
   removeLink(interimLink);
